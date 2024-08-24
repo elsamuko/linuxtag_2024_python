@@ -6,4 +6,4 @@ MAIN_DIR="$SCRIPT_DIR/.."
 
 cd "$MAIN_DIR" || exit
 
-python3 -m unittest
+python3 -m unittest --verbose

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# run static analyzers
+# run black formatter
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MAIN_DIR="$SCRIPT_DIR/.."
@@ -13,12 +13,8 @@ fi
 
 RC=0
 
-echo "flake8"
-flake8 linuxtag
-RC=$((RC + $?))
-
-echo "mypy"
-mypy linuxtag
+echo "black"
+black linuxtag
 RC=$((RC + $?))
 
 exit $RC
