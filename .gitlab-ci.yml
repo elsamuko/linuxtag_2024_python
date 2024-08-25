@@ -1,0 +1,25 @@
+stages:
+  - setup
+  - test
+
+setup:
+  stage: setup
+  script:
+    - ./scripts/setup_venv.sh
+  artifacts:
+    paths:
+      - venv
+
+test:static:
+  stage: test
+  dependencies:
+    - setup
+  script:
+    - ./scripts/run_statictests.sh
+
+test:unit:
+  stage: test
+  dependencies:
+    - setup
+  script:
+    - ./scripts/run_unittests.sh
