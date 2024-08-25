@@ -3,6 +3,7 @@ import logging
 import signal
 import sys
 from typing import Any
+import argparse
 
 
 def get_version() -> str:
@@ -28,6 +29,14 @@ def init_logging() -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--test", action="store_true", default=False)
+    args = parser.parse_args()
+
+    if args.test:
+        print("ok")
+        return
+
     # handle keyboard interrupts
     signal.signal(signal.SIGINT, handler)
 
