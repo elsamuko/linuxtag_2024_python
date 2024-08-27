@@ -33,6 +33,19 @@
 
 ## integration testing
 
+```mermaid
+graph LR
+    subgraph App
+        UnitA
+        UnitB
+        UnitC
+    end
+    Integrationtest --> App
+    Unittest --> UnitA
+    Unittest --> UnitB
+    Unittest --> UnitC
+```
+
 ## pipelines/workflows
 
 * gitlab
