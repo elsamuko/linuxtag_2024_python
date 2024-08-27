@@ -3,3 +3,4 @@ mypy
 black
 pytest
 coverage
+types-requests
