@@ -4,6 +4,7 @@ import signal
 import sys
 from typing import Any
 import argparse
+from linuxtag import worker
 
 
 def get_version() -> str:
@@ -29,18 +30,24 @@ def init_logging() -> None:
 
 
 def main() -> None:
+    # handle keyboard interrupts
+    signal.signal(signal.SIGINT, handler)
+    init_logging()
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--test", action="store_true", default=False)
+    parser.add_argument("--json", action="store_true", default=False)
     args = parser.parse_args()
 
     if args.test:
         print("ok")
         return
 
-    # handle keyboard interrupts
-    signal.signal(signal.SIGINT, handler)
-
-    init_logging()
+    if args.json:
+        # read json from stdin
+        rv = worker.work(sys.stdin.read().rstrip())
+        print(rv)
+        return
 
     print("Hello!")
     logging.info("Hello!")
