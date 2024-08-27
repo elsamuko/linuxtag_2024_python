@@ -33,6 +33,7 @@
 
 ## integration testing
 
-## pipelines
+## pipelines/workflows
 
-* gitlab runner https://stackoverflow.com/a/65920577
+* gitlab
+* github

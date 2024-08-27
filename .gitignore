@@ -14,3 +14,4 @@ linuxtag.egg-info/
 build/
 venv/
 
+requirements*.txt
