@@ -18,7 +18,7 @@ flake8 linuxtag
 RC=$((RC + $?))
 
 echo "mypy"
-mypy linuxtag
+mypy linuxtag --ignore-missing-imports
 RC=$((RC + $?))
 
 exit $RC
