@@ -50,3 +50,7 @@ graph LR
 
 * gitlab
 * github
+
+## Optional
+
+* https://github.com/astral-sh/uv
