@@ -48,8 +48,10 @@ graph LR
 
 ## pipelines/workflows
 
-* gitlab
-* github
+* gitlab pipelines
+    * https://gitlab.com/elsamuko/linuxtag_2024_python/-/pipelines
+* github workflows
+    * https://github.com/elsamuko/linuxtag_2024_python/actions
 
 ## Optional
 
