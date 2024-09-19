@@ -15,6 +15,13 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(12, functions.add_five(7))
         # self.assertEqual(13, functions.add_five(7))
 
+    def test_sunday(self):
+        self.assertTrue(functions.is_sunday("2024-09-22"))  # happy
+        self.assertFalse(functions.is_sunday("2024-09-21"))  # also happy
+        # self.assertFalse(functions.is_sunday("2024-09-99"))  # wrong day
+        # self.assertFalse(functions.is_sunday())  # no arg
+        # self.assertFalse(functions.is_sunday("Nase"))  # wrong arg
+
     @patch(f"requests.get")
     def test_get_ip(self, mock):
         mock.return_value = DummyResponse(b"Blubb")
