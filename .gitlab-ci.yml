@@ -25,4 +25,5 @@ test:unit:
   dependencies:
     - setup
   script:
+    - echo "Hallo Linuxtag"
     - ./scripts/run_unittests.sh
