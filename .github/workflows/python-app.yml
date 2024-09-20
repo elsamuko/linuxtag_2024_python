@@ -27,6 +27,7 @@ jobs:
       - name: Run static tests
         run: |
           ./scripts/run_statictests.sh
+          echo "Hallo"
       - name: Run unit tests
         run: |
           ./scripts/run_unittests.sh
