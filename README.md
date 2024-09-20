@@ -19,6 +19,12 @@
     * mocking
     * coverage
 
+### Example
+
+```bash
+./venv/bin/python3 -m unittest tests.test_functions.TestFunctions.test_add_five
+```
+
 ## Formatting
 
 * autopep8 (https://github.com/hhatto/autopep8)
